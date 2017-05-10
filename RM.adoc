@@ -1,3 +1,5 @@
+:imagesdir: resimler
+
 *130202017 Büşra Ceren SÖNMEZ*
 
 *130202055 Kardelen TUNÇ*
@@ -12,13 +14,15 @@
 
 *Projenin çalıştırılması*
 
+*öncelikle dp-slam klasörünün içeriğinin eksiksiz olması ve ImageMagicks programının kurulması gerekir.*
+
 image::dpslam.jpg
-<<<<<<< HEAD
 
 image::icerik.jpg
-=======
- 
-image::icerik.jpg
- 
- 
->>>>>>> origin/master
+
+*Daha sonra terminalde dp-slam algoritmasının olduğu konuma gidilir ve sırasıyla 'make' ve './slam -p loop5.log' komutları yazılır, böylece algoritma loop5.log datasını işlemeye başlar.*
+
+image::data.jpg
+
+
+
