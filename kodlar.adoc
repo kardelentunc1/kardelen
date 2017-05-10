@@ -1,4 +1,4 @@
-*DP-SLAM Algoritması*
+*DP-SLAM Algoritması PDF'in açıklaması*
 
 *Eşzamanlı konum belirleme ve haritalama robotlar ve özerk araçlar tarafından, bilinmeyen bir
 çevre içersinde mevcut yer ile birlikte çevrenin haritasını çıkarma veya verilen bir haritaya bağlı olarak
