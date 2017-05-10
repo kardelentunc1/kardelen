@@ -38,7 +38,7 @@ image::data2.jpg[]
 
 image::harita1.jpg[]
 
-*Son adımda luşan harita ise böyledir:*
+*Son adımda oluşan harita ise böyledir:*
 
 image::harita2.jpg[]
 
