@@ -12,8 +12,6 @@
 
 *Projenin çalıştırılması*
 
-image::1.jpg
- 
-image::2.jpg
- 
- 
+image::dpslam.jpg
+
+image::icerik.jpg
