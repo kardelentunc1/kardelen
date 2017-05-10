@@ -1,6 +1,9 @@
 *DP-SLAM Algoritması*
 
-
+*Eşzamanlı konum belirleme ve haritalama robotlar ve özerk araçlar tarafından, bilinmeyen bir
+çevre içersinde mevcut yer ile birlikte çevrenin haritasını çıkarma veya verilen bir haritaya bağlı olarak
+mevcut yer ve haritanın bilgi güncellemesi için kullanılan bir yöntemdir.*
+*Giriş verisi olarak* ODOMETRY <x> <y> <theta> ve LASER <number> <values> değerlerine sahip bir dataset kullanılır, çıkış verisi olarak ise .png uzantılı harita görseller elde edilir.
 
 *Dokümandaki matematiksel ifadelerin kodlanması*
 
