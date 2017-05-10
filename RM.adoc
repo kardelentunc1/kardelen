@@ -16,13 +16,25 @@
 
 *öncelikle dp-slam klasörünün içeriğinin eksiksiz olması ve ImageMagicks programının kurulması gerekir.*
 
-image::dpslam.jpg
+image::dpslam.jpg[]
 
-image::icerik.jpg
+image::icerik.jpg[]
 
-*Daha sonra terminalde dp-slam algoritmasının olduğu konuma gidilir ve sırasıyla 'make' ve './slam -p loop5.log' komutları yazılır, böylece algoritma loop5.log datasını işlemeye başlar.*
+*Daha sonra terminalde dp-slam algoritmasının olduğu konuma gidilir ve sırasıyla 
 
-image::data.jpg
+'make' ve 
 
+'./slam -p loop5.log' komutları yazılır, böylece algoritma loop5.log datasını işlemeye başlar.*
 
+image::data1.jpg[]
+
+image::data2.jpg[]
+
+*Data işlendikçe harita görselleri oluşmaya başlar.*
+
+image::harita1.jpg[]
+
+*Son adımda luşan harita ise böyledir:*
+
+image::harita2.jpg[]
 
