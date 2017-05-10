@@ -24,11 +24,15 @@ image::dpslam.jpg[]
 
 image::icerik.jpg[]
 
-*Daha sonra terminalde dp-slam algoritmasının olduğu konuma gidilir ve sırasıyla 
+*Daha sonra terminalde dp-slam algoritmasının olduğu konuma gidilir ve sırasıyla *
 
-'make' ve 
+'make' 
 
-'./slam -p loop5.log' komutları yazılır, böylece algoritma loop5.log datasını işlemeye başlar.*
+*ve* 
+
+'./slam -p loop5.log' 
+
+komutları yazılır, böylece algoritma loop5.log datasını işlemeye başlar.*
 
 image::data1.jpg[]
 
