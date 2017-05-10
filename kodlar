@@ -1,1 +1,23 @@
+*Lokalizasyon için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla karşılaştırması 
+gerekir.*
 
+*Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti hesaplanmış formülün karşılığı;*
+
+_
+  while (1) {
+    for (i=0; i < highMap[x][y]->total; i++) {
+      if (highMap[x][y]->array[i].ID == ID) {
+	if (highMap[x][y]->array[i].hits == 0)
+	  return 0;
+	return (1.0 - exp(-(highMap[x][y]->array[i].hits/highMap[x][y]->array[i].distance) * distance));
+      }
+    }
+
+    if (h_particleID[ID].parent == NULL)
+      return UNKNOWN;
+    else 
+      ID = h_particleID[ID].parent->ID;
+  }
+
+  return UNKNOWN;
+}_
