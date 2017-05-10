@@ -6,6 +6,10 @@
 
 *Konu Adı: DP SLAM 2.0*
 
+Indir= https://github.com/jordant0/DP-SLAM/tree/master/dp-slam 
+
+*Bulunan farklı dataset linki= http://www.cs.duke.edu/~parr/dpslam/*
+
 *Projenin çalıştırılması için gerekli olanlar:*
 
 * rosbag
