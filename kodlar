@@ -3,8 +3,7 @@ gerekir.*
 
 *Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti hesaplanmış formülün karşılığı;*
 
-_
-  while (1) {
+_while (1) {
     for (i=0; i < highMap[x][y]->total; i++) {
       if (highMap[x][y]->array[i].ID == ID) {
 	if (highMap[x][y]->array[i].hits == 0)
