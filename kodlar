@@ -1,7 +1,7 @@
-*Haritanın iyileştirilmesi için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla *
-*karşılaştırması gerekir.*
+Haritanın iyileştirilmesi için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla 
+karşılaştırması gerekir.
 
-*Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti hesaplama formülün karşılığı;*
+Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti hesaplama formülün karşılığı;
  
  for (i=0; i < H_ID_NUMBER-1; i++) 
     if (h_particleID[i].ID == i) 
@@ -50,15 +50,14 @@
       j++;
     }
   }
-  
-*şeklindedir.*
+  şeklindedir.
 
-* En kötü ve en iyi durum analizi ise;*
+ En kötü ve en iyi durum analizi ise;
 if (j < H_SAMPLE_NUMBER) {
     // Normalize particle probabilities. Note that they have already been exponentiated
     total = 0.0;
     for (i = 0; i < h_cur_saved_particles_used; i++) 
-      total = total + h_savedParticle[i].probability;          *//en iyi durum*
+      total = total + h_savedParticle[i].probability;          //en iyi durum
 
     for (i=0; i < h_cur_saved_particles_used; i++)
       h_savedParticle[i].probability = h_savedParticle[i].probability/total;
@@ -71,7 +70,7 @@ if (j < H_SAMPLE_NUMBER) {
       k = 0;
       ftemp = MTrandDec()*total;
       while (ftemp > (h_savedParticle[k].probability)) {
-	ftemp = ftemp - h_savedParticle[k].probability;        * //en kötü durum*
+	ftemp = ftemp - h_savedParticle[k].probability;          //en kötü durum
 	k++;
       }
       h_children[k]++;
@@ -81,12 +80,12 @@ if (j < H_SAMPLE_NUMBER) {
   }
 }
 
-*şeklindedir.*
+şeklindedir.
 
 
-*Tutarlılık, verilen bir uzunluğa sahip bir lazer atışının kesintiye uğrama ihtimalini doğrudan etkilememesi gerektiğini göstermektedir.*
-*Tutarlılığı Lazerin p türünde bir ortam vasıtasıyla x mesafesinde ilerledikten sonra lazerin kesileceğine dair birikimli olasılık olarak
-tanımlarsak, her k bölmeler için tutarlılık değeri;*
+Tutarlılık, verilen bir uzunluğa sahip bir lazer atışının kesintiye uğrama ihtimalini doğrudan etkilememesi gerektiğini göstermektedir.
+Tutarlılığı Lazerin p türünde bir ortam vasıtasıyla x mesafesinde ilerledikten sonra lazerin kesileceğine dair birikimli olasılık olarak
+tanımlarsak, her k bölmeler için tutarlılık değeri;
 
 while (1) {
     for (i=0; i < highMap[x][y]->; i++) {
@@ -105,7 +104,6 @@ while (1) {
 
   return UNKNOWN;
 }
-
-*olarak kodlanmıştır.*
+olarak kodlanmıştır.
 
 
