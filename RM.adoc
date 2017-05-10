@@ -11,4 +11,7 @@
 * ImageMagick resim dönüştürücüsü
 
 *Projenin çalıştırılması*
- image::1.jpg[]
+
+ image::1.jpg
+ 
+ 
