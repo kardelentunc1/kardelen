@@ -1,10 +1,94 @@
-*Lokalizasyon için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla karşılaştırması 
-gerekir.*
+*Haritanın iyileştirilmesi için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla 
+karşılaştırması gerekir.*
+*Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti hesaplama formülün karşılığı;*
+ 
+ for (i=0; i < H_ID_NUMBER-1; i++) 
+    if (h_particleID[i].ID == i) 
+      while (h_particleID[i].parent->generation == -111) 
+	h_particleID[i].parent = h_particleID[i].parent->parent;
+  j = 0;
+  for (i = 0; i < h_cur_saved_particles_used; i++) {
+    while (h_savedParticle[i].ancestryNode->generation == -111) 
+      h_savedParticle[i].ancestryNode = h_savedParticle[i].ancestryNode->parent;
 
-*Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti hesaplanmış formülün karşılığı;*
+    if (h_savedParticle[i].ancestryNode->numChildren == 1) {
+      h_savedParticle[i].ancestryNode->generation = h_curGeneration;
+      h_savedParticle[i].ancestryNode->numChildren = 0;
+      h_particle[j].ancestryNode = h_savedParticle[i].ancestryNode;
+
+      h_particle[j].x = h_savedParticle[i].x;
+      h_particle[j].y = h_savedParticle[i].y;
+      h_particle[j].theta = h_savedParticle[i].theta;
+      h_particle[j].probability = h_savedParticle[i].probability;
+      j++;
+    }
+    else if (h_savedParticle[i].ancestryNode->numChildren > 0) {
+      temp = &(h_particleID[ h_availableID[h_cleanID] ]);
+      temp->ID = h_availableID[h_cleanID];
+      h_cleanID--;
+
+      temp->parent = h_savedParticle[i].ancestryNode;
+      temp->mapEntries = NULL;
+      temp->= 0;
+      temp->size = 0;
+      temp->generation = h_curGeneration;
+      temp->numChildren = 0;
+      temp->path = NULL;
+      temp->seen = 0;
+
+      if (h_cleanID < 0) {
+	fprintf(stderr, " !!! Insufficient Number of Particle IDs : Abandon Ship !!!\n");
+	h_cleanID = 0;
+      }
+
+      h_particle[i].ancestryNode = temp;
+      h_particle[j].x = h_savedParticle[i].x;
+      h_particle[j].y = h_savedParticle[i].y;
+      h_particle[j].theta = h_savedParticle[i].theta;
+      h_particle[j].probability = h_savedParticle[i].probability;
+      j++;
+    }
+  }
+  
+*şeklindedir.*
+
+* En kötü ve en iyi durum analizi ise;*
+if (j < H_SAMPLE_NUMBER) {
+    // Normalize particle probabilities. Note that they have already been exponentiated
+    total = 0.0;
+    for (i = 0; i < h_cur_saved_particles_used; i++) 
+      total = total + h_savedParticle[i].probability;          *//en iyi durum*
+
+    for (i=0; i < h_cur_saved_particles_used; i++)
+      h_savedParticle[i].probability = h_savedParticle[i].probability/total;
+
+    total = 0.0;
+    for (i = 0; i < h_cur_saved_particles_used; i++) 
+      total = total + h_savedParticle[i].probability;
+
+    while (j < H_SAMPLE_NUMBER) {
+      k = 0;
+      ftemp = MTrandDec()*total;
+      while (ftemp > (h_savedParticle[k].probability)) {
+	ftemp = ftemp - h_savedParticle[k].probability;        * //en kötü durum*
+	k++;
+      }
+      h_children[k]++;
+
+      j++;
+    }
+  }
+}
+
+*şeklindedir.*
+
+
+*Tutarlılık, verilen bir uzunluğa sahip bir lazer atışının kesintiye uğrama ihtimalini doğrudan etkilememesi gerektiğini göstermektedir.*
+*Tutarlılığı Lazerin p türünde bir ortam vasıtasıyla x mesafesinde ilerledikten sonra lazerin kesileceğine dair birikimli olasılık olarak
+tanımlarsak, her k bölmeler için tutarlılık değeri;*
 
 while (1) {
-    for (i=0; i < highMap[x][y]->total; i++) {
+    for (i=0; i < highMap[x][y]->; i++) {
       if (highMap[x][y]->array[i].ID == ID) {
 	if (highMap[x][y]->array[i].hits == 0)
 	  return 0;
@@ -20,3 +104,7 @@ while (1) {
 
   return UNKNOWN;
 }
+
+*olarak kodlanmıştır.*
+
+
