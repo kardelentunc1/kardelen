@@ -13,5 +13,12 @@
 *Projenin çalıştırılması*
 
 image::dpslam.jpg
+<<<<<<< HEAD
 
 image::icerik.jpg
+=======
+ 
+image::icerik.jpg
+ 
+ 
+>>>>>>> origin/master
