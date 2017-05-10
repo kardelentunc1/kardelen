@@ -1,5 +1,5 @@
-*Haritanın iyileştirilmesi için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla 
-karşılaştırması gerekir.*
+*Haritanın iyileştirilmesi için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla *
+*karşılaştırması gerekir.*
 *Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti hesaplama formülün karşılığı;*
  
  for (i=0; i < H_ID_NUMBER-1; i++) 
