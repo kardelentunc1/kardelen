@@ -12,4 +12,4 @@
 
 *Projenin çalıştırılması*
 
-* image::sunset.jpg[]
+* image::1.png[]
