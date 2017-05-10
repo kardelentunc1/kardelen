@@ -1,6 +1,11 @@
-Haritanın iyileştirilmesi için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla 
-karşılaştırması gerekir.
+*DP-SLAM Algoritması*
 
+
+
+*Dokümandaki matematiksel ifadelerin kodlanması*
+
+*Haritanın iyileştirilmesi için, her bir karenin tüm gözlem setini dikkate alması ve bunları bu noktaya kadar oluşturduğu haritayla 
+karşılaştırması gerekir.
 Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti hesaplama formülün karşılığı;
  
  for (i=0; i < H_ID_NUMBER-1; i++) 
@@ -52,7 +57,7 @@ Bunun için ağacımızın D derinlikli olduğunu varsayılan ağaç maliyeti he
   }
   şeklindedir.
 
- En kötü ve en iyi durum analizi ise;
+ *En kötü ve en iyi durum analizi ise;
 if (j < H_SAMPLE_NUMBER) {
     // Normalize particle probabilities. Note that they have already been exponentiated
     total = 0.0;
@@ -83,7 +88,7 @@ if (j < H_SAMPLE_NUMBER) {
 şeklindedir.
 
 
-Tutarlılık, verilen bir uzunluğa sahip bir lazer atışının kesintiye uğrama ihtimalini doğrudan etkilememesi gerektiğini göstermektedir.
+*Tutarlılık, verilen bir uzunluğa sahip bir lazer atışının kesintiye uğrama ihtimalini doğrudan etkilememesi gerektiğini göstermektedir.
 Tutarlılığı Lazerin p türünde bir ortam vasıtasıyla x mesafesinde ilerledikten sonra lazerin kesileceğine dair birikimli olasılık olarak
 tanımlarsak, her k bölmeler için tutarlılık değeri;
 
