@@ -12,7 +12,6 @@ Indir= https://github.com/jordant0/DP-SLAM/tree/master/dp-slam
 
 *Projenin çalıştırılması için gerekli olanlar:*
 
-* rosbag
 * laser scan_data (loop5.log)
 * ImageMagick resim dönüştürücüsü
 
