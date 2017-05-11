@@ -31,7 +31,7 @@ image::icerik.jpg[]
 
 './slam -p loop5.log' 
 
-komutları yazılır, böylece algoritma loop5.log datasını işlemeye başlar.*
+*komutları yazılır, böylece algoritma loop5.log datasını işlemeye başlar.*
 
 image::data1.jpg[]
 
