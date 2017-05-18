@@ -1,0 +1,11 @@
+:imagesdir: resimler
+
+*130202055 Kardelen Tunç*
+
+*Çapraz Kontrol Sonucu*
+
+*FlirtLib Projesi*
+
+image::ikinci.jpg[]
+
+Ascidoc da anlatılan şekilde projeyi indirerek adımları takip ettim. Fakat önceki sonuçta alınan sonuçtaki gibi 'make' komutundan sonra hata aldım.
