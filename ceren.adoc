@@ -1,0 +1,11 @@
+:imagesdir: resimler
+
+*130202017 Büşra Ceren Sönmez*
+
+*Çapraz Kontrol Sonucu*
+
+*FlirtLib Projesi*
+
+image::kontrol.jpg[]
+
+Proje Downloads klasörüne indirildi Terminal ekranında projenin dizinine gidip çalıştırmak için make komutu yazıldı ancak hata alındı.
